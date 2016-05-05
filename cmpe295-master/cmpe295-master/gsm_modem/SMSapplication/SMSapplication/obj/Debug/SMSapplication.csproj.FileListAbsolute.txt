@@ -1,0 +1,16 @@
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\bin\Debug\SMSapplication.pdb
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\Cmpe285_SMSapplication.Cmpe285_SMSapplication.resources
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\Cmpe285_SMSapplication.Properties.Resources.resources
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csproj.GenerateResource.Cache
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.exe
+F:\SJSU SE\PROF WEIDER YU\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.pdb
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\bin\Debug\SMSapplication.exe
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\bin\Debug\SMSapplication.pdb
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csprojResolveAssemblyReference.cache
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\Cmpe285_SMSapplication.Cmpe285_SMSapplication.resources
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\Cmpe285_SMSapplication.Properties.Resources.resources
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.csproj.GenerateResource.Cache
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.exe
+F:\SJSU SE\PROF WEIDER YU\CMPE 285\PROJECT\R & D\SMSapplication\SMSapplication\SMSapplication\obj\Debug\SMSapplication.pdb
