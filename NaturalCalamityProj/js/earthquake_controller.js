@@ -104,11 +104,52 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 			xmlDoc = parser.parseFromString(xmlstr,"text/xml");
 			var len = xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue.length;
 			console.log(xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue.substring(0, len - 1));
+			var sent = "The Probability of earthquake occurence is:"+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year";
 			document.getElementById("to").innerHTML  = "The Probability of earthquake occurence is:"+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year";
-			console.log($scope.valueOfEar);
+			//console.log($scope.valueOfEar);
+			//writeToFile(sent);
+			var content = sent;
+			var link = document.createElement('a');
+			var blob = new Blob(["\ufeff", content]);
+			var url = URL.createObjectURL(blob);
+			link.href = url;
+			link.setAttribute('download', 'caldata.txt');
+			link.click();
+			/*$(function () {
+		        //var str = "hi,file";
+		        createDownloadLink("#export",sent,"naturalcalam.txt");
+		    });*/
+			
 		});
 	
 		
+	}
+	
+	var blobObject = null;
+
+	function createDownloadLink(anchorSelector, str, fileName){
+		
+		if(window.navigator.msSaveOrOpenBlob) {
+			var fileData = [str];
+			blobObject = new Blob(fileData);
+			$(anchorSelector).click(function(){
+				window.navigator.msSaveOrOpenBlob(blobObject, fileName);
+			});
+		} else {
+			var url = "data:text/plain;charset=utf-8," + encodeURIComponent(str);
+			$(anchorSelector).attr("href", url);
+		}
+	}
+
+	
+	
+
+	
+	function writeToFile(cont){
+	    var fso = new ActiveXObject("Scripting.FileSystemObject");
+	    var fh = fso.OpenTextFile("data.txt", 8, false, 0);
+	    fh.WriteLine(cont);
+	    fh.Close();
 	}
 		
 	function load_page(){
@@ -417,15 +458,31 @@ mod.controller('regCtrl', function($scope, $http, $uibModalInstance, $window){
 
 	$scope.user = {
 			username : '',
-			password : ''
+			name : '',
+			phone : ''
+			
 	};
 	
 	//$scope.logging = false;
 	$scope.doLogin = function(){
 		
 		console.log($scope.user.username);
-		console.log($scope.user.password);
-		$uibModalInstance.close();
+		console.log($scope.user.name);
+		console.log($scope.user.phone);
+		
+		
+		$.ajax({
+			type: "POST",
+			data: 'email='+$scope.user.username+'&name='+$scope.user.name+'&phone='+$scope.user.phone,
+	        url: './js/earthquake/earthsys.php',
+	        async: false,
+	        success: function(data){
+	            console.log(data);
+	            $uibModalInstance.close();
+	        },
+	    })
+		
+		
 		/*$http.post('/authApi/signup', {email: $scope.user.username, 
 				password : $scope.user.password,
 				name : $scope.user.name

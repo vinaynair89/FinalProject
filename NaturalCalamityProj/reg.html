@@ -3,7 +3,9 @@
 	<form name="loginForm">
 		<input class="form-control" data-ng-model="user.username" type="email" placeholder="Email"  required="required"/>
 		<div class="separator"></div>
-		<input type="password" class="form-control" data-ng-model="user.password" placeholder="Password" required="required"/>
+		<input class="form-control" data-ng-model="user.name" placeholder="Name" required="required"/>
+		<div class="separator"></div>
+		<input class="form-control" data-ng-model="user.phone" placeholder="Phone" required="required"/>
 		<div class="separator"></div>
 		<div class="text-center">
 			<button class="btn btn-primary" data-ng-click="doLogin()" data-ng-disabled="!loginForm.$valid">

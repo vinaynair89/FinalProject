@@ -53,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Natural Calamity Dashboard</a>
+                <a class="navbar-brand" href="index.php">Natural Calamity Dashboard</a>
                 <a  data-ng-click="launchAuth()" class="pointer" style="color: white;">
 					<i class="fa fa-user"></i> <span class="mobile-hidden">Register</span>
 				</a>
