@@ -1,5 +1,5 @@
 ﻿'use strict';
-
+/*Author : Vinay Janardhanan*/
 angular.module('psTweetService', []).factory('psTweetService', [
     '$rootScope',
     function ($rootScope) {

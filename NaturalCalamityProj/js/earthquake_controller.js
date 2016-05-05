@@ -1,4 +1,4 @@
-
+/*Author : Vinay Janardhanan*/
 var mod = angular.module('earthcontrol',['ui.bootstrap', 'ngRoute','psTweetService'])
 
 mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http', '$log', function($scope, $rootScope, $uibModal, $http, $log) {

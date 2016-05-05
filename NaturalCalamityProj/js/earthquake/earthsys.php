@@ -1,5 +1,5 @@
 <?php
-
+/*Author : Vinay Janardhanan*/
 $email = $_POST['email'];
 
 $name = $_POST['name'];

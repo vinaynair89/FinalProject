@@ -1,7 +1,7 @@
 <?php ?>
 <!DOCTYPE html>
 <html lang="en" data-ng-app="controller">
-
+<!-- Author: Vinay Janardhanan -->
 <head>
 
     <meta charset="utf-8">
