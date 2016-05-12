@@ -173,9 +173,9 @@
                     <li>
                         <a href="tweets.html"><i class="fa fa-fw fa-table"></i>Tweets</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href=""><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
+                    </li>-->
                    <!--  <li>
                         <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
                     </li>
@@ -226,7 +226,7 @@
                 </div>
                 
                 <!-- /.row -->
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-lg-8">
                         <div class="panel panel-red">
                             <div class="panel-heading">
@@ -237,29 +237,36 @@
 							</div>
 				    	</div>
 				    </div>
-				  </div>
+				  </div> -->
 				  <div class="row">
                     <div class="col-lg-8">
                         <div class="panel panel-red">
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Status Chart</h3>
                             </div>
-                            City<input type="text" data-ng-model="check.city"></input>&nbsp;Magnitude<input type="text" data-ng-model="check.mag"></input>&nbsp;
-                            <button data-ng-click="update(check)">Submit</button>
+                            City<input type="text" data-ng-model="check.city" style="top:20px;"></input>&nbsp;Magnitude<input type="text" data-ng-model="check.mag" style="top:8px;"></input>&nbsp;
+                            <button class="btn btn-success" data-ng-click="update(check)">Submit</button>
                             </br>
                             
                             <h2 id="to"></h2>
-                            <div class="panel-body">
+                            <!-- <div class="panel-body">
                                 <div id="geo_chart_div" style="width: 900px; height: 500px;"></div>
-							</div>
+							</div> -->
 				    	</div>
 				    </div>
 				  </div>
 				  <div class="row">
+				  	<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "Secondary effects_param", "Magnitude", "Depth","Population_param", "Architechture_param"</h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 5 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div5" style="width: 700px; height: 500px"></div></center>
@@ -269,7 +276,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 5 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart </h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart5" style="width: 700px; height: 500px"></div></center>
@@ -279,10 +286,17 @@
 					
 				</div>
 				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "Secondary effects_param", "Magnitude", "Depth","Population_param"</h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 4 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div4" style="width: 700px; height: 500px"></div></center>
@@ -292,7 +306,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 4 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart </h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart4" style="width: 700px; height: 500px"></div></center>
@@ -302,10 +316,17 @@
 					
 				</div>
 				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "Secondary effects_param", "Magnitude", "Depth"</h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 3 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div3" style="width: 700px; height: 500px"></div></center>
@@ -315,7 +336,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 3 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart </h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart3" style="width: 700px; height: 500px"></div></center>

@@ -88,7 +88,7 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 		
 		
 		$.get('http://api.openhazards.com/GetEarthquakeProbability?q='+$scope.checkdata.city.split(" ").join("%").toUpperCase()+',CA&m='+$scope.checkdata.mag+'&r=100',function(data){
-			
+			var loc=$scope.checkdata.city.toUpperCase();
 			console.log(String(data));
 			/*var txt = "<?xml version='1.0' encoding='UTF-8'?>"+data;
 			console.log(txt);
@@ -97,24 +97,35 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 			console.log(xmlDoc.getElementsByTagName("prob")[0]);
 			console.log("yello");
 			*/
-			
+			var fl="C:/Users/Vinay/Downloads/caldata.txt";
+			var file = new File([new Blob()],fl);
 			var xmlstr = data.xml ? data.xml : (new XMLSerializer()).serializeToString(data);
 			
 			parser = new DOMParser();
 			xmlDoc = parser.parseFromString(xmlstr,"text/xml");
 			var len = xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue.length;
 			console.log(xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue.substring(0, len - 1));
-			var sent = "The Probability of earthquake occurence is:"+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year";
-			document.getElementById("to").innerHTML  = "The Probability of earthquake occurence is:"+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year";
+			var sent = "The Probability of earthquake occurence at "+loc+" is "+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year within 100 kms";
+			document.getElementById("to").innerHTML  = "The Probability of earthquake occurence at "+loc+ " is "+ xmlDoc.getElementsByTagName("prob")[0].childNodes[0].nodeValue+" in the coming year within 100 kms";
 			//console.log($scope.valueOfEar);
 			//writeToFile(sent);
+			
+			
 			var content = sent;
+			
+			
 			var link = document.createElement('a');
 			var blob = new Blob(["\ufeff", content]);
 			var url = URL.createObjectURL(blob);
 			link.href = url;
 			link.setAttribute('download', 'caldata.txt');
 			link.click();
+			
+			//file.open("w"); // open file with write access
+			//file.writeln("First line of text");
+			//file.writeln("Second line of text " + content);
+			//file.write(content);
+			//file.close();
 			/*$(function () {
 		        //var str = "hi,file";
 		        createDownloadLink("#export",sent,"naturalcalam.txt");
@@ -126,7 +137,7 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 	}
 	
 	var blobObject = null;
-
+	/*
 	function createDownloadLink(anchorSelector, str, fileName){
 		
 		if(window.navigator.msSaveOrOpenBlob) {
@@ -139,18 +150,18 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 			var url = "data:text/plain;charset=utf-8," + encodeURIComponent(str);
 			$(anchorSelector).attr("href", url);
 		}
-	}
+	}*/
 
 	
 	
 
-	
+	/*
 	function writeToFile(cont){
 	    var fso = new ActiveXObject("Scripting.FileSystemObject");
 	    var fh = fso.OpenTextFile("data.txt", 8, false, 0);
 	    fh.WriteLine(cont);
 	    fh.Close();
-	}
+	}*/
 		
 	function load_page(){
 		
@@ -161,7 +172,7 @@ mod.controller('earthController', ['$scope', '$rootScope', '$uibModal', '$http',
 	            if(data){
 	            	console.log("Controller:"+data);
 	                //chart_data = $.parseJSON(data);
-	                drawStuff(data);
+	                //drawStuff(data);
 	            }
 	        },
 	    });

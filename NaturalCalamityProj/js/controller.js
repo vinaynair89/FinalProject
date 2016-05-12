@@ -2,9 +2,9 @@
 
 
 
-angular.module('controller',[])
+var cont=angular.module('controller',['ui.bootstrap', 'ngRoute'])
 
-.controller('tabController', ['$scope', '$http', '$log', function($scope, $http, $log) {
+cont.controller('tabController', ['$scope', '$rootScope', '$uibModal' , '$http', '$log', function($scope, $rootScope, $uibModal, $http, $log) {
 	
 	
 	google.charts.load('current', {'packages':['bar','corechart','table']});
@@ -15,7 +15,20 @@ angular.module('controller',[])
 
 	
 	//google.charts.setOnLoadCallback(drawNewData);
-	
+	$scope.launchAuth = function(){
+		var modalInstance = $uibModal.open({
+			templateUrl: '/NaturalCalamityProj/reg.html',
+			controller: 'regCtrl',
+			size: 'sm'
+		});
+
+		modalInstance.result.then(function (user) {
+			$rootScope.user = user;
+			$scope.user = user;
+		}, function () {
+
+		});
+	};
 	
 	
 	
@@ -40,17 +53,17 @@ angular.module('controller',[])
 		})
 		
 	function load_page(){
-	    $.ajax({
+	   $.ajax({
 	        url: './js/storm/storm_data.php',
 	        async: false,
 	        success: function(data){
 	            if(data){
 	                //chart_data = $.parseJSON(data);
-	                drawStuff(data);
+	                //drawStuff(data);
 	            }
 	        },
 	    });
-	    
+	    /*
 	    $.ajax({
 	        url: './js/storm/storm_data_moist.php',
 	        async: false,
@@ -60,7 +73,7 @@ angular.module('controller',[])
 	                drawNewData(data);
 	            }
 	        },
-	    });
+	    });*/
 	    
 	    $.ajax({
 	        url: './js/storm/predict.php',
@@ -183,7 +196,7 @@ function drawStuff(data) {
   ['Other', 3]
 ]);*/
 
-	
+
 	
 
 
@@ -414,5 +427,51 @@ function prepareLineChartData(data){
 	 return chart;
 }
 //google.load('visualization', '1', {packages:['controls'], callback: drawStuff});
+
+cont.controller('regCtrl', function($scope, $http, $uibModalInstance, $window){
+
+	$scope.user = {
+			username : '',
+			name : '',
+			phone : ''
+			
+	};
+	
+	//$scope.logging = false;
+	$scope.doLogin = function(){
+		
+		console.log($scope.user.username);
+		console.log($scope.user.name);
+		console.log($scope.user.phone);
+		
+		
+		$.ajax({
+			type: "POST",
+			data: 'email='+$scope.user.username+'&name='+$scope.user.name+'&phone='+$scope.user.phone,
+	        url: './js/earthquake/earthsys.php',
+	        async: false,
+	        success: function(data){
+	            console.log(data);
+	            $uibModalInstance.close();
+	        },
+	    })
+		
+		
+		/*$http.post('/authApi/signup', {email: $scope.user.username, 
+				password : $scope.user.password,
+				name : $scope.user.name
+			}
+		).success(function(data){
+			if(data.error)
+				alert(data.error);
+			else
+				$modalInstance.close(data.user);
+		});*/
+	};
+
+	
+
+});
+  
   
 

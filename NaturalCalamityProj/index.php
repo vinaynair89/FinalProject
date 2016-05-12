@@ -54,9 +54,9 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.php">Natural Calamity Dashboard</a>
-                <a  data-ng-click="launchAuth()" class="pointer" style="color: white;">
-					<i class="fa fa-user"></i> <span class="mobile-hidden">Register</span>
-				</a>
+                <button class="btn btn-primary" data-ng-click="launchAuth()" style="position:absolute; top:8px; right:0;">
+						<i class="fa fa-user"></i> <span class="mobile-hidden">Register</span>
+				</button>
             </div>
             <!-- Top Menu Items -->
             			
@@ -75,9 +75,9 @@
                     <li>
                        <!-- tables.html --> <a href="tweets.html"><i class="fa fa-fw fa-table"></i>Tweets </a>
                     </li>
-                    <li>
-                     <!-- forms.html --> <a href=""><i class="fa fa-fw fa-edit"></i> Forms</a>
-                    </li>
+                    <!--<li>
+                      <a href=""><i class="fa fa-fw fa-edit"></i> Forms</a>
+                    </li>-->
                     <!--  
                     <li>
                      <!-- bootstrap-elements.html   <a href=""><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
@@ -134,7 +134,7 @@
                 <!--  <div class="row">
                     
                 <!-- /.row -->
-				<div class="row">
+				<!-- <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -145,7 +145,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-default">
@@ -158,7 +158,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<!-- <div class="row">
                     <div class="col-lg-7">
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -178,13 +178,20 @@
     							<div id="donutchart" style="width: 600px; height: 500px;"></div>
   							</div>
 						</div>
-					</div>
-				</div>
+					</div> 
+				</div>  -->
 				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "AirPressure","WindSpeed", "Moisture" ,"Moisure Density","Snow", "Hail Size", "Dust Size" </h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 7 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div7" style="width: 700px; height: 500px"></div></center>
@@ -194,7 +201,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 7 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart</h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart7" style="width: 700px; height: 500px"></div></center>
@@ -204,10 +211,17 @@
 					
 				</div>
 				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "AirPressure","WindSpeed", "Moisture" ,"Moisure Density","Snow", "Hail Size"</h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 6 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div6" style="width: 700px; height: 500px"></div></center>
@@ -217,7 +231,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 6 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart </h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart6" style="width: 700px; height: 500px"></div></center>
@@ -227,10 +241,17 @@
 					
 				</div>
 				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-primary">
+							<div class="panel-heading">
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Factors considered are "AirPressure","WindSpeed", "Moisture" ,"Moisure Density","Snow"</h3>
+	                        </div>
+						</div>
+					</div>
 					<div class="col-lg-6">
 						<div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab for 5 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Tab </h3>
 	                            </div>
 	      						<div class="row">
 				                    <center><div id="table_div5" style="width: 700px; height: 500px"></div></center>
@@ -240,7 +261,7 @@
 					<div class="col-lg-6">
 	                        <div class="panel panel-red">
 	                            <div class="panel-heading">
-	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart for 5 Factors</h3>
+	                                <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Final Result Chart </h3>
 	                            </div>
 								<div class="row">
 				                    <center><div id="line_chart5" style="width: 700px; height: 500px"></div></center>
@@ -427,6 +448,9 @@
     <!-- JavaScript Controllers -->
     <script src="js/app.js"></script>
     <script src="js/controller.js"></script>
+    
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
     
    
 
